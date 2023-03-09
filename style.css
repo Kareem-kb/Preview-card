@@ -1,0 +1,136 @@
+:root {
+  --bg: hsl(30, 38%, 92%);
+  --bgCard: hsl(0, 0%, 100%);
+  --radi: 10px;
+  --textC: hsl(228, 12%, 48%);
+  --title: hsl(212, 21%, 14%);
+  --green: hsl(158, 36%, 37%);
+}
+body {
+  box-sizing: content-box;
+  background-color: var(--bg);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.mobile {
+  display: none;
+}
+
+img {
+  max-width: 15rem;
+  border-radius: var(--radi) 0 0 var(--radi);
+  height: 100%;
+}
+
+.wrapper {
+  margin: 24vh auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-radius: var(--radi);
+  max-width: 35rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: var(--bgCard);
+  justify-content: space-between;
+}
+.imges {
+  flex-basis: 40%;
+}
+article {
+  flex-basis: 60%;
+  background-color: var(--bgCard);
+  margin-left: 2.5rem;
+}
+h4 {
+  font-size: 0.5rem;
+  color: var(--textC);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+  margin-top: 1.5rem;
+}
+h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  max-width: 10rem;
+  color: var(--title);
+}
+p {
+  font-size: 0.7rem;
+  color: var(--textC);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  max-width: 12rem;
+  word-spacing: 0.1rem;
+}
+strong {
+  font-family: "Fraunces", serif;
+  color: var(--green);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+label {
+  color: var(--textC);
+  font-family: "Fraunces", serif;
+  font-size: 0.6rem;
+  margin: 1rem;
+  text-decoration: line-through;
+}
+button {
+  background-color: var(--green);
+  color: var(--bgCard);
+  border: none;
+  border-radius: var(--radi);
+  padding: 0.8rem 3.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(72, 174, 72);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.svg {
+  margin: 0 0.2rem;
+}
+
+@media screen and (max-width: 375px) {
+  .mobile {
+    display: block;
+  }
+  .disktop {
+    display: none;
+  }
+  .wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: var(--radi);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* border: 1px solid red; */
+  }
+  .imges {
+    width: 100%;
+  }
+  article {
+    margin: 0;
+    background-color: var(--bgCard);
+    width: 100%;
+    border-radius: 0 0 var(--radi) var(--radi);
+  }
+  .text {
+    padding-left: 3rem;
+    justify-content: stretch;
+  }
+  img {
+    max-width: none;
+    border-radius: var(--radi) var(--radi) 0 0;
+  }
+}
